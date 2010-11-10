@@ -1,0 +1,100 @@
+/*body { padding: 0px 0px;
+       margin: 0px 0px; 
+       background-color: white }
+
+#page { display: block;
+        padding: 0px;
+        margin: 0px;
+        padding-bottom: 10px; }
+
+#header { display: block;
+          position: relative;
+          padding: 0;
+          margin: 0;
+          vertical-align: middle;
+          border-bottom-style: solid;
+          border-width: thin }
+
+#header h1 { padding: 0; 
+             margin: 0;}
+
+*/
+/* Contenu */
+
+#main{ display: block;
+       padding: 10px;
+       overflow: hidden;
+       font-size: 100%;
+       line-height: 100% }
+
+a.idref:visited {color : #416DFF; text-decoration : none; }
+a.idref:link {color : #416DFF; text-decoration : none; }
+a.idref:hover {text-decoration : none; }
+a.idref:active {text-decoration : none; }
+
+a.modref:visited {color : #416DFF; text-decoration : none; }
+a.modref:link {color : #416DFF; text-decoration : none; }
+a.modref:hover {text-decoration : none; }
+a.modref:active {text-decoration : none; }
+
+.keyword { color : #cf1d1d }
+#main { color: black }
+
+#main .section { background-color:#90bdff;
+                 font-size : 175% }
+
+.doc { margin: 0px;
+       padding: 10px;
+       font-family: sans-serif;
+       font-size: 100%;
+       line-height: 100%;
+       font-weight:bold;
+       color: black;
+       background-color: #90bdff;
+       border-style: plain}
+
+.inlinecode { 
+    display: inline;
+    font-family: monospace } 
+
+.code { 
+    padding: 10px 10px 10px 10px;
+    display: block;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+ } 
+
+.comments {
+    display: inline-bolck;
+    color: orange;
+    font-family: monospace;
+    font-style:italic;
+
+}
+
+.id { display: inline; }
+
+.id[type="constructor"] { 
+    color: rgb(60%,0%,0%);
+}
+
+.id[type="var"] { 
+    color: rgb(40%,0%,40%);
+}
+
+.id[type="definition"] { 
+    color: rgb(0%,40%,0%);
+}
+
+.id[type="lemma"] { 
+    color: rgb(0%,40%,0%);
+}
+
+.id[type="inductive"] { 
+    color: rgb(0%,0%,80%);
+}
+
+.id[type="keyword"] { 
+ color : #cf1d1d;
+}

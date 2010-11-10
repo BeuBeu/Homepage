@@ -1,0 +1,139 @@
+/* C'est parti mon kiki */
+
+body {
+    margin:0;
+    font-size:0.85em;
+    color:#555555;
+    background-color:#FFFFFF;
+    text-align:left;
+}
+
+
+a {
+    color:#4d87ce;
+    font-weight:bold;
+    text-decoration:none;
+}
+a:hover {
+    color:#2a65ad;
+}
+
+/*
+ol,ul {
+
+}
+*/
+li {
+    list-style-image:url(img/li.gif);
+    line-height:20px;
+    text-align:left;
+}
+
+#content {
+    width:720px;
+    margin:0 auto 0 auto;
+    text-align:left;
+}
+
+#Contact {
+    /*width:210px;*/
+    float:right;
+    display:block;
+    position:relative;
+    text-align:left;
+}
+
+#Photo {
+    position:relative;
+    left:8px
+    float:left;
+    display:inline;
+}
+
+#header h1{
+    font-weight:normal;
+    font-size:2em;
+    text-transform:uppercase;
+    color:#2a65ad;
+    text-align:left;
+    width: 720px;
+    padding-top:20px;
+    margin:0 auto 30px auto;
+}
+
+#content h1 {
+/*     font-family:"Trebuchet MS", "Arial Narrow", Arial, sans-serif; */
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size:1.875em;
+    text-transform:uppercase;
+    font-weight:normal;
+    margin:0;
+    padding:0;
+    padding-top:30px;
+    color:#736451;
+    margin-bottom:10px;
+    text-align:left;
+}
+
+#content h2 {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size:1.3em;
+    text-transform:uppercase;
+    text-align:right;
+    font-weight:normal;
+    padding:0;
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#000000;
+    border-bottom:1px solid #eeeeee;
+}
+
+#content h3 {
+    font-family: Arial, sans-serif;
+    text-align:left;
+    margin-bottom:4px;
+}
+
+.abstract {
+    padding-left:8px;
+    padding-right:8px;
+    text-align:justify;
+    line-height:1.4em;
+}
+
+
+/* format de la biblio
+ * Une table dont chaque ligne est une entrée de la forme :
+ * [bibref] | [detail de la ref]
+ * .biblio, .bib_entry, .bib_ref, bib_details
+ */
+
+.biblio table{
+    width:80%;
+    margin:0 auto 0 auto;
+    border-style:none;
+
+}
+
+.biblio table tr.bib_entry{
+    vertical-align: top;
+    text-align:justify;
+}
+
+.biblio table td.bib_ref{
+    color:#4d87ce;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.biblio table tr.bib_entry:target td.bib_details{
+    background-color:lightgray;
+}
+
+.biblio h3{
+    padding:30px 0 5px 0;
+}
+
+.clear {
+    clear: both;
+}

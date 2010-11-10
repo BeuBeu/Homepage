@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Benoit Boyer" />
+    <meta name="keywords" content="Benoit Boyer, inria, université Rennes 1, Ravaj project, Celtique" />
+    <meta name="keywords" content="theorem proving, formal methods, tree automata, term rewriting, model checking" />
+    <meta name="description" content="PhD canadidate advised by Th. Jensen and Th. Genet in Celtique team at University Rennes 1" />
+    <meta name="robots" content="all" />
+    <!-- link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" / --> 
+    
+    <link rel="stylesheet" type="text/css" href="mysuperstyle.css" />
+    <link rel="stylesheet" type="text/css" href="coqdoc.css" />
+    
+    <title>Benoît Boyer</title>
+    <!-- Pas d'humour site sniff : Ouebpaije -->
+  </head>
+
+  
+  <body>
+    <div id="header">
+      <h1>Benoît Boyer</h1>
+    </div>
+
+    <div id="content">
+
+      <!-- L'ordre des calques a de l'importance... -->
+      <!-- Il faut placer le flottant (Contact) avant la Photo -->
+      
+      <div id="Photo">
+        <img src="./Boyer.jpg" height="160"/>
+      </div>
+
+      <div id="Contact">
+        <h2>Me contacter</h2>
+        <table>
+          <tr style="vertical-align: top">
+            <td><b>Address</b></td><td>:</td>
+            <td>IRISA, Campus de Beaulieu <br /> 35042 Rennes Cedex  France</td>
+          </tr><tr>
+            <td><b>E-mail</b></td><td>:</td>
+            <td>benoit.boyer(chez)irisa.fr</td>
+          </tr><tr>
+            <td><b>Tél</b></td><td>:</td>
+            <td>+33 2 99 84 75 77</td>
+          </tr><tr>
+            <td><b>Fax</b></td><td>:</td>
+            <td>+33 2 99 84 71 71</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Dans le doute je laisse le clear ici, mais je crois qu'il sert à rien... -->
+      <div class="clear"></div>
+
+      <div id="AboutMe">
+        <h2>Présentation</h2>
+        <div class="abstract">
+          Je suis étudiant en thèse sous la direction de
+          <a href="http://www.irisa.fr/celtique/genet/" target="_blank"><em>Thomas Genet</em></a>
+          et de
+          <a href="http://www.irisa.fr/celtique/jensen/" target="_blank"><em>Thomas Jensen</em></a>
+          Actuellement <em>ATER</em> à 
+          l'<a href="http://www.ifsic.univ-rennes1.fr" target="_blank"><em>IFSIC</em></a> /
+          <a href="http://www.univ-rennes1.fr/english/" target="_blank">Université Rennes 1</a>,
+          j'effectue mes travaux de recherche dans l'équipe <a href="http://www.irisa.fr/celtique/" target="_blank">Celtique</a>
+          à l'<a href="http://irisa.fr/english/home.target" target="_blank"><em>IRISA</em></a>.
+          Mes travaux de recherche font partie du projet
+          <a target="_blank" href="http://www.irisa.fr/lande/genet/RAVAJ/">RAVAJ</a>(2006-2010).
+          L'objectif ce projet est d'utiliser et d'étendre les techniques de vérification et d'analyses statiques basées sur la réécriture et les automates
+          d'arbres pour analyser des programmes Java.
+        </div>
+      </div>
+
+      <div id="Research">
+        <h2>Activités de Recherche</h2>
+
+        <h3>Le Model Checking Régulier</h3>
+        <div class="abstract">
+          Mes travaux sont motivés par la vérification de programmes.
+          En particulier, je m'intéresse à la vérification de propriétés de systèmes,
+          pour lesquels l'ensemble des états accessibles ne peut être modélisé que de manière
+          infinie [<a href="http://www.montefiore.ulg.ac.be/~boigelot/research/WB98.ps.gz">BW-CAV98</a>]. Mais l'approche envisagée fonctionne aussi
+          très bien dans le cas de systèmes à ensemble fini d’états.
+          Il s'agit de la vérification de modèles à base de langage régulier de
+          termes plus communément appelée <strong>Tree Regular Model Checking</strong>
+          (<i>TRMC</i>) [<a target="_blank" href="http://www.springerlink.com/content/ldycr7k2vdhaquxp/">ALRO-TACAS05</a>]. C'est une extension de la méthode qui fut initialement
+          introduite pour calculer l'ensemble des états atteignables en utilisant les langages réguliers
+          de mots [<a href="http://www.liafa.jussieu.fr/~abou/rmc-cav00.ps.gz">BJNT-CAV00</a>,
+          <a target="_blank" href="http://www.springerlink.com/content/gprf9fnxh1me06eq/">BLW-CAV03</a>].
+          
+          En TRMC, on modélise un <strong>système de transitions</strong> (tel qu'un
+          programme ou un protocole) par un triplet <strong><i>(F, I, Rel)</i></strong>, avec:
+          <ul style="width:70%">
+            <li><i>F</i> une signature permettant de construire <i>T(F)</i> l'ensemble des termes représentants
+              les différentes configurations ou états du système; </li>
+
+            <li><i>I &sube; T(F)</i> un ensemble régulier de configurations donc représentable
+              par un automate d'arbres <i>A</i>, <i>i.e.</i> <i>L(A) = I</i>;</li>
+
+            <li><i>Rel</i> est une relation de transition représentée par <i>R</i> un ensemble de règles de réécriture.
+              Le système de réécriture doit être linéaire à gauche. 
+          </ul>
+          Dans ce contexte, un programme sera alors représenté par un triplet <i>(F, A, R)</i>.
+          Ce type de modélisation est très expressif, puisqu'il est utilisé pour modéliser
+          des protocoles cryptographiques [<a target="_blank" href="http://www.avispa-project.org">AVISPA</a>], ainsi que pour exprimer un sous-ensemble
+          très conséquent du ByteCode Java [<a target="_blank" href="http://www.springerlink.com/content/l6837vu653m6k882/">BGJL-RTA07</a>].
+
+          Pour ce modèle, on considère le problème d'atteignabilité que l'on formule par
+          la question 
+          <div style="text-align:center; font-size:1.1em; margin:5px 0 5px 0">
+            &laquo; Est-il possible de réécrire un terme <i>t<sub>0</sub> &isin; I</i>
+            en un terme <i>t<sub>Bad</sub> &isin; Bad</i> ?&raquo;
+          </div>
+          où <i>Bad</i> dénote les configurations/états invalides du systèmes.
+          
+          Pour calculer <i>R<sup>*</sup>(I)</i> l'ensemble des termes atteignables,
+          il est possible d'utiliser la <strong>complétion d'automates d'arbres</strong>.
+          C'est un semi-algorithme
+          [<a target="_blank" href="http://www.irisa.fr/celtique/genet/Publications/Genet-RTA98.ps">Genet-RTA98</a>, <a target="_blank" href="http://www.irisa.fr/celtique/genet/Publications/FeuilladeGVTT-JAR04.ps.gz">FGVTT-JAR04</a>] qui calcule
+          un automate d'arbres, <i>i.e.</i> une représentation régulière (et donc finie)
+          des ensembles infinis, qui est en général une sur-approximation de <i>R<sup>*</sup>(I)</i>.
+          En effet, dans les cas où <i>R<sup>*</sup>(I)</i> n'est pas calculable, 
+          il est nécessaire d'<i>accélérer</i> l'exploration de l'espace d'états afin
+          d'atteindre notamment les termes situés à une <i>distance infinie</i> des termes initiaux,
+          pour se ramener à un <i>temps de calcul</i> raisonnable, ce qui revient à construire
+          une abstraction du modèle. Ainsi, la perte d'information engendrée à l'abstraction rend le 
+          calcul possible mais moins précis: dans ce cas, on calcule une <strong> sur-approximation de 
+          l'ensemble <i>R<sup>*</sup>(I)</i></strong>. En général, l'approximation est différente
+          pour chaque problème d'atteignabilité considéré, mais l'abstraction peut être facilement
+          exprimée au moyen d'un ensemble d'équations
+          [<a target="_blank" href="http://www.springerlink.com/content/nt1p0k8y0lh7qqk0/">MPMO-CADE03</a>].
+        </div> <!-- Fin du Model Checking -->
+        
+
+        <h3>Détection de contre-exemples et Raffinement [<a href="#INRIA-00501487">BBGL10</a>]</h3>
+        <div class="abstract">
+          <p>
+            D'un point de vue Model Checking, la technique de vérification présentée ci-dessus
+            n'est pas complètement satisfaisante si l'on considère le cas où la vérification
+            échoue. En effet, il est toujours intéressant de savoir lorsqu'une configuration
+            viole la propriété, si cela est le résultat d'une approximation
+            trop grossière (fausse alarme) ou si le système viole réellement la propriété (contre-exemple). 
+            Dans l'état, l'algorithme permet pas cette distinction.
+            Certains travaux se sont déjà intéressés à la question, et proposent 
+            une approche à la <strong>CEGAR</strong> (CounterExample-Guided Abstraction Refinement),
+            c'est à dire qu'ils retirent les fausses alarmes détectées lors du calcul l'approximation.
+            Mais ces méthodes reposent sur la construction d'un historique des différents automates
+            obtenus à chaque étape de complétion ainsi qu'une méthode de calcul en arrière afin de déterminer
+            si on est dans le cas d'une fausse alarme ou d'un contre-exemple.
+          </p>
+          <p>
+            En collaboration avec
+            <a href="http://www.montefiore.ulg.ac.be/~legay/" target="_blank"><em>Axel Legay</em></a>
+            et
+            <a href="http://www.univ-orleans.fr/lifo/Members/Yohan.Boichut/" target="_blank"><em>Yohan Boichut</em></a>,
+            j'ai proposé une nouvelle approche basée sur des automates d'arbres
+            instrumentés par des formules logiques et dont la sémantique permet de
+            différencier une configuration issue de l'approximation d'une
+            configuration atteignable. Ces automates contiennent toute
+            l'information nécessaire pour être élagué facilement en cas
+            d'approximation trop grossière. Pour de tels automates, nous
+            fournissons également une procédure de test de la vacuité de
+            l'intersection avec un automate caractérisant la propriété (les
+            configurations interdites).  Cette procédure produit une formule
+            logique permettant de caractériser la présence d'un contre-exemple
+            ou l'information nécessaire au raffinement l'automate.
+          </p>
+        </div>
+        
+        <h3>Vérification de Propriétés temporelles [<a href="#Rule09:Boyer:Genet">Rule09</a>]</h3>
+        <div class="abstract">
+          <p>
+            Dans sa version originale, la complétion d'automates
+            d'arbres permet de vérifier des propriétés de
+            sécurité par non-atteignabilité. Il m'a semblé nécessaire
+            d'utiliser une approche similaire pour élargir le champs des
+            propriétés vérifiables sur les systèmes de réécriture. Ces
+            travaux s'appliquent à étendre la complétion pour produire des
+            automates d'arbres sur lesquels il est possible de vérifier
+            des propriétés exprimées dans une logique dérivée de la
+            <i>logique temporelle linéaire</i> (LTL), où les prédicats sont
+            définis au moyen des automates d'arbres.
+          </p>
+          <p>
+            Cela m'a amené à proposer une nouvelle version de la complétion qui
+            produit un automate d'arbres plus précis : l'introduction des
+            &epsilon;-transitions dotées d'une sémantique bien particulière
+            permet de donner une relation d'ordre sur les termes reconnus par
+            l'automate. Cette relation d'ordre est en fait une abstraction de la
+            relation de réécriture. L'ensemble des transitions silencieuses forme
+            alors un graphe orienté dont chaque noeud dénote un ensemble de termes
+            mis en relation par des arcs décrivant la relation abstraite de
+            réécriture. Ce graphe est ensuite extrait de l'automate pour former
+            une <i>structure de Kripke</i> décrivant sous forme de graphe la relation
+            abstraite de réécriture. C'est en fait sur cette relation abstraite
+            qu'il est possible de vérifier des propriétés temporelles en 
+            se rapprochant du cadre standard du Model Checking et plus
+            précisément, des techniques de vérification basées sur des
+            <i>automates de Büchi</i>.
+          </p>
+        </div>
+
+        <h3>Certification d'analyses régulières [<a href="#Ijcar08:Boyer:Genet:Jensen">IJCAR08</a>, <a href="#RR-6462">BGJ08</a>]</h3>
+        <div class="abstract">
+          <p>
+            Le problème posé est celui de la certification des résultats sous forme
+            d'automates produits par la complétion. De tels
+            automates sont obtenus grâce à des algorithmes complexes dont
+            l'implantation peut contenir des erreurs. Or, la certification de la
+            complétion, même si elle est possible, n'offre que peu d'intérêt dans
+            la mesure où les algorithmes et implantations sont en perpétuelle
+            évolution pour des questions de performances. Cela obligerait à
+            reprendre la certification devenue obsolète à chaque nouvelle version
+            de l'implantation. En revanche, un outil certifiant l'automate est
+            plus simple et surtout plus stable dans le temps. Dans ce contexte
+            certifier un automate résultant de la complétion consiste à
+            montrer que ce dernier est clos par réécriture.  On dit qu'un automate est
+            clos par réécriture si les termes obtenus par réécriture des termes
+            reconnus par l'automate sont eux-mêmes reconnus par cet automate.
+          </p>
+          <p>
+            Pour vérifier la propriété de clôture, j'ai défini un vérificateur
+            d'automates d'arbre. A partir d'une description formelle de la théorie des
+            automates et de la réécriture, j'ai prouvé que la clôture par réécriture 
+            d'un automate d'arbre est décidable.          
+            La validité de cette preuve est assurée par l'assistant de preuves Coq
+            dans lequel la théorie est énoncée et les preuves associées sont
+            vérifiées. Cet assistant de preuve est fondé sur la logique du calcul
+            des constructions inductives (CCI), dont l'une des propriétés
+            fondamentales est l'isomorphisme de Curry-Howard établissant un lien
+            très fort entre preuve et programme. De ce lien découle le mécanisme
+            d'extraction qui permet à partir d'une preuve d'une propriété
+            d'extraire un programme dont l'exécution vérifie la propriété
+            démontrée. Ainsi à partir de la preuve Coq de la décidabilité de la
+            clôture d'un automate pour un système de réécriture j'ai extrait un
+            programme Caml permettant de vérifier si un automate est clos par
+            réécriture.
+          </p>
+          <p>
+            En contrepartie, l'isomorphisme de Curry-Horward relie fortement
+            l'efficacité du programme et la complexité de la preuve. D'une preuve
+            simple résulte souvent l'extraction d'un programme naïf d'une
+            complexité médiocre. Cela m'a obligé à porter une attention toute
+            particulière à la qualité des preuves et à la modélisation utilisée
+            notamment pour la représentation des automates d'arbres, afin d'obtenir
+            un vérifieur certifié et efficace.
+          </p>
+        </div>
+      </div> <!-- Fin de Research -->
+
+
+      <div id="Publications" class="biblio">
+        <h2>Publications</h2>
+        
+        <h3>Conférences, Workshops</h3>
+        <table>
+          <tr class="bib_entry" id="Rule09:Boyer:Genet">
+            <td class="bib_ref">[Rule09]</td>
+            <td class="bib_details">
+              Benoît Boyer and Thomas Genet.
+              <strong>Verifying Temporal Regular Properties of Abstractions of Term Rewriting Systems</strong>.
+              In Proceedings of <i>Rule09, International Workshop on Rule-Based Specification and Programming</i>.
+              Volume abs/1003.4803. 2010. <br />
+              [ <a href="http://arxiv.org/pdf/1003.4803v1"
+                   target="BoyerGenet_Rule09.pdf">.pdf</a> ]
+          </td></tr>
+          <tr class="bib_entry" id="Ijcar08:Boyer:Genet:Jensen">
+            <td class="bib_ref">[IJCAR08]</td>
+            <td class="bib_details">
+              Benoît Boyer, Thomas Genet et Thomas Jensen.
+              <strong>Certifying a Tree Automata Completion Checker</strong>.
+              In proceedings of <i>IJCAR 2008, Automated Reasoning, 4th International Joint Conference</i>.
+              Volume 5195 of Lecture Notes in Computer Science. Springer-Verlag, 2008.<br />
+              [ <a href="http://www.springerlink.com/content/9624825164tx0684/fulltext.pdf"
+                   target="BoyerGenetJensen_IJCAR08.pdf">.pdf</a> ]
+          </td></tr>
+        </table>
+      
+        
+        <h3>Rapports techniques</h3>
+        <table>
+          <tr class="bib_entry" id="RR-6462">
+            <td class="bib_ref">[BGJ08]</td>
+            <td class="bib_details">
+              Benoît Boyer, Thomas Genet and Thomas Jensen.
+              <strong>Certifying a Tree Automata Completion Checker</strong>.
+              Technical Report RR-6462, INRIA, 2008.<br />
+              [<a href="http://hal.inria.fr/docs/00/27/06/14/PDF/report.pdf">.pdf</a>]
+            </td>
+          </tr>
+          <tr class="bib_entry" id="INRIA-00501487">
+            <td class="bib_ref">[BBGL10]</td>
+            <td class="bib_details">
+              Yohan Boichut, Benoît Boyer, Thomas Genet et Axel Legay.
+              <strong>Fast Equational Abstraction Refinement for Regular Tree Model Checking</strong>.
+              Technical Report INRIA-00501487, INRIA, 2010.<br />
+              [<a href="http://hal.inria.fr/docs/00/50/14/87/PDF/main.pdf">.pdf</a>]
+            </td>
+          </tr>
+        </table>
+
+        <h3>Autres</h3>
+        <table>
+          <tr class="bib_entry" id="OICMS05">
+            <td class="bib_ref">[OICMS05]</td>
+            <td>
+              P-E&nbsp;Gros, B&nbsp;.Boyer, H&nbsp;.Boisgontier, A.&nbsp;Tucholka, N.&nbsp;Férey, R.&nbsp;Gherbi.
+              <strong>TransCripTome, an algorithm to grid automatically DNA micro-arrays</strong>.
+              In <i>OICMS 2005</i>, Université Blaise Pascal, France, 2005.
+          </td></tr>
+          <tr class="bib_entry" id="TAIMA05">
+            <td class="bib_ref">[TAIMA05]</td>
+            <td>
+              P-E&nbsp;Gros, H.&nbsp;Boisgontier, B.&nbsp;Boyer, A.&nbsp;Tucholka, N.&nbsp;Férey, R.&nbsp;Gherbi.
+              <strong>Transcriptome : détection automatique de spots dans les images de biopuces</strong>.
+              In <i>TAIMA'05 IEEE</i>, Hammamet, Tunisie, 2005.
+            </td>
+          </tr>
+        </table>
+      </div> <!-- Fin de Publications -->
+      
+
+
+      <div id="Teaching">
+        <h2>Enseignement</h2>
+        A venir...
+      </div>
+    
+      <div id="JumbleOfLinks">
+        <h2>En vrac</h2>
+        
+        <dl>
+          <dt>Mes outils préférés:</dt>
+          <dd>Emacs</dd>
+          <dd>O'Caml</dd>
+          <dd>Coq</dd>
+          <dt>Mes liens favoris:</dt>
+          <dd>www.imslp.org</dd>
+          <dt>Inutiles, Addictifs et Chronophages:</dt>
+          <dd>Subway Shuffle http://www.subwayshuffle.com</dd>
+          <dd>Planarity.net</dd>
+          
+        </dl>         
+      
+      </div>
+
+    </div> <!-- Fin de content -->
+
+    <div id="footer">
+      Page éditée le 22/12/1982 :-)
+    </div>
+  </body>
+</html>
